@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent {
-
+  
+  // Arrow: boolean = true
+  // change_arrow() { this.Arrow = false }
 }

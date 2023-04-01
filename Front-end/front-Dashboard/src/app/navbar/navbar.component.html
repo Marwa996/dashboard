@@ -1,1 +1,231 @@
-<p>navbar works!</p>
+<!-- ....................... nav bar ............................ -->
+<nav style=" width: 100vw; ">
+     <div style="
+          background-image: linear-gradient(to right, #647dee, #7f53ac);
+        " class="div_in_navBar d-flex justify-content-between align-items-center">
+          <!-- Left Part in nav bar -->
+          <div style="width: 42%" class=" d-flex justify-content-between align-items-center ms-3">
+               <!-- Logo -->
+               <div class=" logo_img_in_navBar text-white p-3">
+                    <img style="height: 2.5rem" src="/assets/images/Logo/logo.png" alt="الجولف" />
+               </div>
+
+               <div style="width: 80%" class=" d-flex align-items-center justify-content-start">
+
+                    <!-- Title -->
+                    <!-- <div class=" text-white text-center titel-company">شركة الجولف</div> -->
+               </div>
+          </div>
+
+          <!-- Right Part in nav bar -->
+          <div style="width: 58%; height: 8vh"
+               class=" right_div_in_sideBar text-white d-flex justify-content-end align-items-center">
+
+
+
+
+               <!--  dropdown list of the bell  -->
+               <div style="height: 8vh; padding-top: 1.5rem" class="highlighted_div ps-3 dropdown  ">
+                    <div data-bs-toggle="dropdown" class="d-flex justify-content-between align-items-center">
+                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                              class="bi bi-bell-fill" viewBox="0 0 16 16">
+                              <path
+                                   d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z" />
+                         </svg>
+                         <span style="bottom: 0.9rem; right: -0.7rem; font-size: 0.7rem"
+                              class="position-relative badge bg-primary rounded-circle">6</span>
+                    </div>
+
+                    <div class="border ul_move_position_message_bell dropdown-menu border rounded-0">
+                         <!-- Header of Drop Down list  -->
+                         <div style="width: 25rem; height: 3vh" id="drop_down_header"
+                              class="border-bottom d-flex justify-content-between align-items-center mt-2">
+                              <p class="fw-semibold p-3">الاشعارات</p>
+                              <a href="#" style="font-size: 1.9rem"
+                                   class="text-decoration-none text-danger fw-semibold">
+                                   <p class="p-3">×</p>
+                              </a>
+                         </div>
+
+                         <!-- Body of Drop Down list  -->
+                         <div style="overflow-y: scroll; height: 50vh" id="drop_down_body">
+                              <ul class="list-unstyled">
+                                   <!-- Person 1 -->
+                                   <li style="height: 10vh" class="mt-3 ps-3 border-bottom">
+                                        <a href="#" class="d-flex text-dark text-decoration-none">
+                                             <img style="height: 4rem"
+                                                  src="/assets/images/Profile Pictures/avatar-1.jpg"
+                                                  class="rounded-circle" alt="Person_Photo" />
+                                             <div class="w-75 pe-3 ">
+                                                  <p>
+                                                       نرمين الجبار
+                                                       <span class="opacity-50">اضاف مهمة جديدة</span> 
+                                                       <br><span class="fw-semibold opacity-50 pb-3">
+                                                            منذ 4 ثواني
+                                                       </span>
+                                                  </p>
+                                                  
+                                             </div>
+                                        </a>
+                                   </li>
+                                   <!-- Person 2 -->
+                                   <li style="height: 10vh" class="mt-3 pe-3 border-bottom">
+                                        <a href="#" class="d-flex text-dark text-decoration-none">
+                                             <img style="height: 4rem"
+                                                  src="/assets/images/Profile Pictures/avatar-10.jpg"
+                                                  class="rounded-circle" alt="Person_Photo" />
+                                             <div class="w-75 pe-3 ">
+                                                  <p>
+                                                       نرمين الجبار
+                                                       <span class="opacity-50">اضاف مهمة جديدة</span>
+                                                       <br><span class="fw-semibold opacity-50 pb-3">
+                                                            منذ 4 ثواني
+                                                       </span>
+                                                  </p>
+                                             
+                                             </div>
+                                        </a>
+                                   </li>
+                                   <!-- Person 3 -->
+                                   <li style="height: 10vh" class="mt-3 ps-3 border-bottom">
+                                        <a href="#" class="d-flex text-dark text-decoration-none">
+                                             <img style="height: 4rem"
+                                                  src="/assets/images/Profile Pictures/avatar-14.jpg"
+                                                  class="rounded-circle" alt="Person_Photo" />
+                                             <div class="w-75 pe-3 ">
+                                                  <p>
+                                                       نرمين الجبار
+                                                       <span class="opacity-50">اضاف مهمة جديدة</span>
+                                                       <br><span class="fw-semibold opacity-50 pb-3">
+                                                            منذ 4 ثواني
+                                                       </span>
+                                                  </p>
+                                             
+                                             </div>
+                                        </a>
+                                   </li>
+                                   <!-- Person 4 -->
+                                   <li style="height: 10vh" class="mt-3 ps-3 border-bottom">
+                                        <a href="#" class="d-flex text-dark text-decoration-none">
+                                             <img style="height: 4rem"
+                                                  src="/assets/images/Profile Pictures/avatar-17.jpg"
+                                                  class="rounded-circle" alt="Person_Photo" />
+                                             <div class="w-75 pe-3 ">
+                                                  <p>
+                                                       نرمين الجبار
+                                                       <span class="opacity-50">اضاف مهمة جديدة</span>
+                                                       <br><span class="fw-semibold opacity-50 pb-3">
+                                                            منذ 4 ثواني
+                                                       </span>
+                                                  </p>
+                                             
+                                             </div>
+                                        </a>
+                                   </li>
+                                   <!-- Person 5 -->
+                                   <li style="height: 10vh" class="mt-3 ps-3 border-bottom">
+                                        <a href="#" class="d-flex text-dark text-decoration-none">
+                                             <img style="height: 4rem"
+                                                  src="/assets/images/Profile Pictures/avatar-2.jpg"
+                                                  class="rounded-circle" alt="Person_Photo" />
+                                             <div class="w-75 pe-3 ">
+                                                  <p>
+                                                       نرمين الجبار
+                                                       <span class="opacity-50">اضاف مهمة جديدة</span>
+                                                       <br><span class="fw-semibold opacity-50 pb-3">
+                                                            منذ 4 ثواني
+                                                       </span>
+                                                  </p>
+                                             
+                                             </div>
+                                        </a>
+                                   </li>
+                                   <!-- Person 6 -->
+                                   <li style="height: 10vh" class="mt-3 ps-3 border-bottom">
+                                        <a href="#" class="d-flex text-dark text-decoration-none">
+                                             <img style="height: 4rem"
+                                                  src="/assets/images/Profile Pictures/avatar-3.jpg"
+                                                  class="rounded-circle" alt="Person_Photo" />
+                                        <div class="w-75 pe-3 ">
+                                             <p>
+                                                  نرمين الجبار
+                                                  <span class="opacity-50">اضاف مهمة جديدة</span>
+                                                  <br><span class="fw-semibold opacity-50 pb-3">
+                                                       منذ 4 ثواني
+                                                  </span>
+                                             </p>
+                                        
+                                        </div>
+                                        </a>
+                                   </li>
+                                   <!-- Person 7 -->
+                                   <li style="height: 10vh" class="mt-3 ps-3 border-bottom">
+                                        <a href="#" class="d-flex text-dark text-decoration-none">
+                                             <img style="height: 4rem"
+                                                  src="/assets/images/Profile Pictures/avatar-4.jpg"
+                                                  class="rounded-circle" alt="Person_Photo" />
+                                        <div class="w-75 pe-3 ">
+                                             <p>
+                                                  نرمين الجبار
+                                                  <span class="opacity-50">اضاف مهمة جديدة</span>
+                                                  <br><span class="fw-semibold opacity-50 pb-3">
+                                                       منذ 4 ثواني
+                                                  </span>
+                                             </p>
+                                        
+                                        </div>
+                                        </a>
+                                   </li>
+                                   <!-- Person 8 -->
+                                   <li style="height: 10vh" class="mt-3 ps-3 border-bottom">
+                                        <a href="#" class="d-flex text-dark text-decoration-none">
+                                             <img style="height: 4rem"
+                                                  src="/assets/images/Profile Pictures/avatar-5.jpg"
+                                                  class="rounded-circle" alt="Person_Photo" />
+                                             <div class="w-75 pe-3 ">
+                                                  <p>
+                                                       نرمين الجبار
+                                                       <span class="opacity-50">اضاف مهمة جديدة</span>
+                                                       <br><span class="fw-semibold opacity-50 pb-3">
+                                                            منذ 4 ثواني
+                                                       </span>
+                                                  </p>
+                                             
+                                             </div>
+                                        </a>
+                                   </li>
+                              </ul>
+                         </div>
+
+                         <!-- Footer of Drop Down list  -->
+                         <div style="height: 2.5vh" id="drop_down_footer" class="text-center">
+                              <a href="#" class="fw-semibold ms-3 text-black text-decoration-none">عرض كل الاشعارات</a>
+                         </div>
+                    </div>
+               </div>
+
+
+               <!-- dropdown list + image  -->
+               <div style="height: 8vh ;" class="dropdown ">
+                    <a style="height:100% !important; padding:2rem;display: flex !important;"
+                         class=" text-white d-flex align-items-center text-decoration-none fw-semibold" href="#"
+                         role="button" data-bs-toggle="dropdown">
+                         <img style="height: 6vh;" src="/assets/images/Profile Pictures/avatar-5.jpg"
+                              class=" img_in_navBar rounded-circle" alt="User_Photo" />
+                         <span class=" me-2 ">
+                              حمدي
+                              <i style="top: 0.2rem" class="fs-5 position-relative icon-keyboard_arrow_down"></i>
+                         </span>
+                         <i class="d-block d-md-none icon-dots-horizontal-triple fw-bold fs-3"></i>
+                    </a>
+
+
+                    <ul class="ul_move_position_admin dropdown-menu">
+
+                         <li><a class="dropdown-item text-center" href="#">تعديل الحساب</a></li>
+                         <li><a class="dropdown-item text-center" href="#">تسجيل الخروج</a></li>
+                    </ul>
+               </div>
+          </div>
+     </div>
+</nav>
