@@ -9,6 +9,8 @@ import { LoginComponent } from './login/login.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TestComponent } from './test/test.component';
+import { PriceListComponent } from './price-list/price-list.component';
+import { ProductsComponent } from './products/products.component';
 
 @NgModule({
   declarations: [
@@ -16,8 +18,7 @@ import { TestComponent } from './test/test.component';
     NavbarComponent,
     SidebarComponent,
     LoginComponent,
-    MainPageComponent,
-    TestComponent
+    MainPageComponent
   ],
   imports: [
     BrowserModule,
