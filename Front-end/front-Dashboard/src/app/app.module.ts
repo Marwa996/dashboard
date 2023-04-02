@@ -11,6 +11,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { TestComponent } from './test/test.component';
 import { PriceListComponent } from './price-list/price-list.component';
 import { ProductsComponent } from './products/products.component';
+import { MainlayoutComponent } from './mainlayout/mainlayout.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,11 @@ import { ProductsComponent } from './products/products.component';
     NavbarComponent,
     SidebarComponent,
     LoginComponent,
-    MainPageComponent
+    MainPageComponent,
+    PriceListComponent,
+    ProductsComponent,
+    TestComponent,
+    MainlayoutComponent
   ],
   imports: [
     BrowserModule,

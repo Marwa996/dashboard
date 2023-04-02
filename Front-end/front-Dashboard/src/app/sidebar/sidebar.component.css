@@ -22,31 +22,36 @@
 }
 
 .mini_sidebar{
-     width: 15%;
+     width: 10%;
      /* 8% */
           background-color: #34444c !important;
           position: absolute;
-          height: 100vh !important;   
+          height: 200% !important;
+          /* height: 100% !important; */
           transition: all 0.5s ease-in-out;
+          z-index: 90;
 }
 
 
 .mini_sidebar:hover {
      width: 40% !important;
      z-index: 90;   
+     height: 200% !important;
 }
 
 
  
 
-.mini_sidebar:hover .main-titel{
+/* .mini_sidebar:hover .main-titel{
      visibility:visible !important;
 }
 .main-titel{
     
      padding: 0.5rem !important;
      visibility: hidden !important;
-}
+} */
+
+
 .main-butn{
      background-color: transparent;
      border: none;
@@ -136,6 +141,7 @@ a{
           .mini_sidebar:hover {
                width: 50% !important;
                z-index: 90;
+               height: 100vh !important;
           }
 }
 
@@ -153,9 +159,12 @@ a{
 
      .mini_sidebar:hover {
           width: 50% !important;
+          height: 200% !important;
+          /* height: 100% !important; */
      }
           .mini_sidebar {
                width: 19%;
-               
+               height: 200% !important;
+               /* height: 100% !important; */
           }
 }
