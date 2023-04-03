@@ -1,0 +1,514 @@
+<div class="sidenav" [ngClass]="collapsed?'sidenave-collapsed':''">
+     <div class="logo-container">
+          <button class="logo" (click)="togglecollapse()">G</button>
+          <div class="logo-text" *ngIf="collapsed">الجولف</div>
+          <button class="btn-close" *ngIf="collapsed" (click)="closeSidenav()">
+               <i class="fa-solid fa-xmark"></i>
+          </button>
+     </div>
+
+     <ul class="sidenave-nav">
+          <!--الرئيسية  -->
+          <li class="sidenav-item">
+               <a class="sidenave-nav-link" routerLink="Main" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{exact:true}">
+                    <i class="sidenave-link-icon fa-solid fa-house"></i>
+                    <span class="sidenave-link-text" *ngIf="collapsed">الرئيسية</span>
+               </a>
+          </li>
+
+
+          <!-- المنتجات -->
+
+          <li class="sidenav-item" id="flush-headingOne">
+               <a class="sidenave-nav-link" routerLink="Main" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{exact:true}" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    <i class="sidenave-link-icon fa fa-fw fa-cubes"></i>
+                    <span class="sidenave-link-text" *ngIf="collapsed">المنتجات</span>
+                    <i *ngIf="collapsed" class=" fa-solid fa-chevron-left"></i>
+               </a>
+
+               <div *ngIf="collapsed" id="flush-collapseOne" class="accordion-collapse collapse"
+                    aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                         <ul class="hsoub-sidebar-menu">
+                              <li class="hsoub-sidebar-menu-item ">
+                                   <a class="d-flex w-100 bd-highlight" href="/business" routerLinkActive="actives"
+                                        [routerLinkActiveOptions]="{exact:true}">
+
+                                        <i class="ps-3 fs-3 fa-solid fa-chart-simple"></i>
+                                        <p class="bd-highlight">
+                                             الاصناف
+                                        </p>
+                                   </a>
+                              </li>
+                              <li class="hsoub-sidebar-menu-item ">
+                                   <a class="d-flex w-100 bd-highlight" routerLink="product" routerLinkActive="actives"
+                                        [routerLinkActiveOptions]="{exact:true}">
+
+                                        <i class="ps-3 fs-3 padding-right fs-3 fa fa-fw fa-cubes "></i>
+
+                                        <p class="bd-highlight">المنتجات </p>
+
+                                   </a>
+                              </li>
+                              <li class="hsoub-sidebar-menu-item ">
+                                   <a class="d-flex w-100 bd-highlight" routerLink="pricelist"
+                                        routerLinkActive="actives" [routerLinkActiveOptions]="{exact:true}">
+
+                                        <i class="ps-3 fs-3 fa-solid fa-money-bill-wave"></i>
+
+                                        <p class="bd-highlight ">قائمة الاسعار </p>
+
+                                   </a>
+                              </li>
+
+                         </ul>
+                    </div>
+               </div>
+          </li>
+
+
+          <!-- المستخدمين -->
+          <div class="sidenav-item" id="flush-headingTwo">
+               <a class="sidenave-nav-link" routerLink="Main" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{exact:true}" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    <i class="sidenave-link-icon fa-solid fa-users"></i>
+                    <span class="sidenave-link-text" *ngIf="collapsed">المستخدمين</span>
+                    <i *ngIf="collapsed" class=" fa-solid fa-chevron-left p-2 flex-shrink-1 bd-highlight"></i>
+               </a>
+
+
+               <div *ngIf="collapsed" id="flush-collapseTwo" class="accordion-collapse collapse"
+                    aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+
+                         <ul class="hsoub-sidebar-menu">
+                              <li class="hsoub-sidebar-menu-item ">
+                                   <a class="d-flex w-100 bd-highlight" href="/business" routerLinkActive="actives"
+                                        [routerLinkActiveOptions]="{exact:true}">
+
+                                        <i class="ps-3 fs-3 fa-solid fa-user"></i>
+                                        <p class=" bd-highlight ">المراقب العام </p>
+
+                                   </a>
+                              </li>
+                              <li class="hsoub-sidebar-menu-item ">
+                                   <a class="d-flex w-100 bd-highlight" href="/programming" routerLinkActive="actives"
+                                        [routerLinkActiveOptions]="{exact:true}">
+
+                                        <i class="ps-3 fs-3 fa-solid fa-user"></i>
+
+                                        <p class=" bd-highlight ">مدير التسويق </p>
+
+                                   </a>
+                              </li>
+                              <li class="hsoub-sidebar-menu-item ">
+                                   <a class="d-flex w-100 bd-highlight" href="/marketing" routerLinkActive="actives"
+                                        [routerLinkActiveOptions]="{exact:true}">
+
+                                        <i class="ps-3 fs-3 fa-solid fa-user"></i>
+                                        <p class=" bd-highlight ">مدير العملاء </p>
+                                   </a>
+                              </li>
+
+                              <li class="hsoub-sidebar-menu-item ">
+                                   <a class="d-flex w-100 bd-highlight" href="/business" routerLinkActive="actives"
+                                        [routerLinkActiveOptions]="{exact:true}">
+
+                                        <i class="ps-3 fs-3 fa-solid fa-user"></i>
+                                        <p class=" bd-highlight ">مناديب التسويق </p>
+
+
+                                   </a>
+                              </li>
+                              <li class="hsoub-sidebar-menu-item ">
+                                   <a class="d-flex w-100 bd-highlight" href="/programming" routerLinkActive="actives"
+                                        [routerLinkActiveOptions]="{exact:true}">
+
+                                        <i class="ps-3 fs-3 fa-solid fa-user"></i>
+
+                                        <p class=" bd-highlight ">مناديب العملاء </p>
+
+                                   </a>
+                              </li>
+                              <li class="hsoub-sidebar-menu-item ">
+                                   <a class="d-flex w-100 bd-highlight" href="/marketing" routerLinkActive="actives"
+                                        [routerLinkActiveOptions]="{exact:true}">
+
+                                        <i class="ps-3 fs-3 fa-solid fa-user"></i>
+                                        <p class=" bd-highlight ">مستخدمين النظام </p>
+
+
+                                   </a>
+                              </li>
+                         </ul>
+                    </div>
+               </div>
+          </div>
+
+          <!-- قائمة العملاء -->
+          <div class="sidenav-item" id="flush-headingThree">
+               <a class="sidenave-nav-link" routerLink="Main" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{exact:true}" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    <i class="sidenave-link-icon  fa-solid fa-clipboard-list"></i>
+                    <span class="sidenave-link-text" *ngIf="collapsed">قائمة العملاء</span>
+                    <i *ngIf="collapsed" class=" fa-solid fa-chevron-left p-2 flex-shrink-1 bd-highlight"></i>
+               </a>
+
+
+
+               <div *ngIf="collapsed" id="flush-collapseThree" class="accordion-collapse collapse"
+                    aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                         <ul class="hsoub-sidebar-menu">
+                              <li class="hsoub-sidebar-menu-item ">
+                                   <a class="d-flex w-100 bd-highlight" href="/business" routerLinkActive="actives"
+                                        [routerLinkActiveOptions]="{exact:true}">
+
+                                        <i class="ps-3 fs-3 fa-solid fa-user"></i>
+                                        <p class="titel-list w-100 bd-highlight "> الموزعين </p>
+
+                                   </a>
+                              </li>
+                              <li class="hsoub-sidebar-menu-item ">
+                                   <a class="d-flex w-100 bd-highlight" href="/programming" routerLinkActive="actives"
+                                        [routerLinkActiveOptions]="{exact:true}">
+
+                                        <i class="ps-3 fs-3 fa-solid fa-user"></i>
+                                        <p class="titel-list w-100 bd-highlight "> التجار </p>
+
+                                   </a>
+                              </li>
+                              <li class="hsoub-sidebar-menu-item ">
+                                   <a class="d-flex w-100 bd-highlight" href="/marketing" routerLinkActive="actives"
+                                        [routerLinkActiveOptions]="{exact:true}">
+
+                                        <i class="ps-3 fs-3 fa-solid fa-user"></i>
+                                        <p class="titel-list w-100 bd-highlight "> الفنيين </p>
+
+                                   </a>
+                              </li>
+
+                              <li class="hsoub-sidebar-menu-item ">
+                                   <a class="d-flex w-100 bd-highlight" href="/marketing" routerLinkActive="actives"
+                                        [routerLinkActiveOptions]="{exact:true}">
+
+                                        <i class="ps-3 fs-3 fa-solid fa-user"></i>
+                                        <p class="titel-list w-100 bd-highlight "> العملاء </p>
+
+                                   </a>
+                              </li>
+                         </ul>
+                    </div>
+               </div>
+          </div>
+
+          <!-- المناطق -->
+          <div class="sidenav-item" id="flush-headingFour">
+               <a class="sidenave-nav-link" routerLink="Main" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{exact:true}" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                    <i class="sidenave-link-icon  fa-solid fa-earth-asia"></i>
+                    <span class="sidenave-link-text" *ngIf="collapsed">المناطق </span>
+                    <i *ngIf="collapsed" class=" fa-solid fa-chevron-left p-2 flex-shrink-1 bd-highlight"></i>
+               </a>
+
+
+               <div *ngIf="collapsed" id="flush-collapseFour" class="accordion-collapse collapse"
+                    aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                         <ul class="hsoub-sidebar-menu">
+
+                              <li class="hsoub-sidebar-menu-item ">
+                                   <a class="d-flex w-100 bd-highlight" href="/programming" routerLinkActive="actives"
+                                        [routerLinkActiveOptions]="{exact:true}">
+
+                                        <i class="ps-3 fs-3 fa-solid fa-building"></i>
+                                        <p class="  bd-highlight "> المحافظات </p>
+
+                                   </a>
+                              </li>
+                              <li class="hsoub-sidebar-menu-item ">
+                                   <a class="d-flex w-100 bd-highlight" href="/marketing" routerLinkActive="actives"
+                                        [routerLinkActiveOptions]="{exact:true}">
+
+                                        <i class="ps-3 fs-3 fa-solid fa-building"></i>
+                                        <p class="  bd-highlight "> المراكز </p>
+
+                                   </a>
+                              </li>
+
+                         </ul>
+                    </div>
+               </div>
+          </div>
+
+
+          <!-- الهدايا -->
+          <div class="sidenav-item" id="flush-headingfive">
+               <a class="sidenave-nav-link" routerLink="Main" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{exact:true}" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapsefive" aria-expanded="false" aria-controls="flush-collapsefive">
+                    <i class="sidenave-link-icon  fa-solid fa-gift"></i>
+                    <span class="sidenave-link-text" *ngIf="collapsed">الهدايا </span>
+                    <i *ngIf="collapsed" class=" fa-solid fa-chevron-left p-2 flex-shrink-1 bd-highlight"></i>
+               </a>
+
+
+               <div *ngIf="collapsed" id="flush-collapsefive" class="accordion-collapse collapse"
+                    aria-labelledby="flush-headingfive" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                         <ul class="hsoub-sidebar-menu">
+
+                              <li class="hsoub-sidebar-menu-item ">
+                                   <a class="d-flex w-100 bd-highlight" href="/programming" routerLinkActive="actives"
+                                        [routerLinkActiveOptions]="{exact:true}">
+
+                                        <i class="ps-3 fs-3 fa-solid fa-circle-dot"></i>
+                                        <p class="titel-list w-100 bd-highlight "> الهدايا </p>
+
+                                   </a>
+                              </li>
+                              <li class="hsoub-sidebar-menu-item ">
+                                   <a class="d-flex w-100 bd-highlight" href="/marketing" routerLinkActive="actives"
+                                        [routerLinkActiveOptions]="{exact:true}">
+
+                                        <i class="ps-3 fs-3 fa-solid fa-circle-dot"></i>
+                                        <p class="titel-list w-100 bd-highlight "> تقارير الهدايا </p>
+
+                                   </a>
+                              </li>
+
+                         </ul>
+                    </div>
+               </div>
+          </div>
+
+
+          <!-- الطلبات -->
+          <li class="sidenav-item">
+               <a class="sidenave-nav-link" routerLink="Main" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{exact:true}">
+                    <i class="sidenave-link-icon fa-solid fa-truck"></i>
+                    <span class="sidenave-link-text" *ngIf="collapsed">الطلبات</span>
+               </a>
+          </li>
+
+          <!-- شكاوي مغلقة -->
+          <li class="sidenav-item">
+               <a class="sidenave-nav-link" routerLink="Main" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{exact:true}">
+                    <i class="sidenave-link-icon fa-solid fa-list-check"></i>
+                    <span class="sidenave-link-text" *ngIf="collapsed">شكاوي مغلقة</span>
+               </a>
+          </li>
+
+          <!-- طلبات مغلقة -->
+          <li class="sidenav-item">
+               <a class="sidenave-nav-link" routerLink="Main" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{exact:true}">
+                    <i class="sidenave-link-icon fa-solid fa-list-check"></i>
+                    <span class="sidenave-link-text" *ngIf="collapsed">طلبات مغلقة</span>
+               </a>
+          </li>
+
+          <!-- الفواتير -->
+          <li class="sidenav-item">
+               <a class="sidenave-nav-link" routerLink="Main" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{exact:true}">
+                    <i class="sidenave-link-icon fa-solid fa-paste"></i>
+                    <span class="sidenave-link-text" *ngIf="collapsed">الفواتير </span>
+               </a>
+          </li>
+
+
+          <!-- الزيارات -->
+          <div class="sidenav-item" id="flush-headingSix">
+               <a class="sidenave-nav-link" routerLink="Main" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{exact:true}" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapse-2-One" aria-expanded="false" aria-controls="flush-collapse-2-One">
+                    <i class="sidenave-link-icon fa-solid fa-house-flag"></i>
+                    <span class="sidenave-link-text" *ngIf="collapsed">الزيارات</span>
+                    <i *ngIf="collapsed" class=" fa-solid fa-chevron-left"></i>
+               </a>
+
+               <div *ngIf="collapsed" id="flush-collapse-2-One" class="accordion-collapse collapse"
+                    aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                         <ul class="hsoub-sidebar-menu">
+                              <li class="hsoub-sidebar-menu-item ">
+                                   <a class="d-flex w-100 bd-highlight" href="/business" routerLinkActive="actives"
+                                        [routerLinkActiveOptions]="{exact:true}">
+
+                                        <i class="px-2 fa-solid fa-circle-dot"></i>
+                                        <p class="titel-list w-100 bd-highlight">
+                                             زيارات التجار
+                                        </p>
+                                   </a>
+                              </li>
+                              <li class="hsoub-sidebar-menu-item ">
+                                   <a class="d-flex w-100 bd-highlight" href="/programming" routerLinkActive="actives"
+                                        [routerLinkActiveOptions]="{exact:true}">
+
+                                        <i class="fa-solid fa-circle-dot"></i>
+
+                                        <p class="px-2 titel-list w-100 bd-highlight">زيارات الموزعين </p>
+
+                                   </a>
+                              </li>
+
+
+                         </ul>
+                    </div>
+               </div>
+          </div>
+
+
+          <!-- الاعدادات -->
+          <div class="sidenav-item" id="flush-headingsiven">
+               <a class="sidenave-nav-link" routerLink="Main" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{exact:true}" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapse-2-Two" aria-expanded="false" aria-controls="flush-collapse-2-Two">
+                    <i class="sidenave-link-icon fa-solid fa-gears"></i>
+                    <span class="sidenave-link-text" *ngIf="collapsed">الاعدادات</span>
+                    <i *ngIf="collapsed" class=" fa-solid fa-chevron-left"></i>
+               </a>
+
+               <div *ngIf="collapsed" id="flush-collapse-2-Two" class="accordion-collapse collapse"
+                    aria-labelledby="flush-headingsiven" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+
+                         <ul class="hsoub-sidebar-menu">
+                              <li class="hsoub-sidebar-menu-item ">
+                                   <a class="d-flex w-100 bd-highlight" href="/business" routerLinkActive="actives"
+                                        [routerLinkActiveOptions]="{exact:true}">
+
+
+                                        <i class="ps-3 fs-3 fa-solid fa-bookmark"></i>
+                                        <p class="titel-list w-100 bd-highlight "> الكوبونات </p>
+
+                                   </a>
+                              </li>
+                              <li class="hsoub-sidebar-menu-item ">
+                                   <a class="d-flex w-100 bd-highlight" href="/programming" routerLinkActive="actives"
+                                        [routerLinkActiveOptions]="{exact:true}">
+
+                                        <i class="ps-3 fs-3 fa-solid fa-bookmark"></i>
+
+                                        <p class="titel-list w-100 bd-highlight ">تصنيف التجار </p>
+
+                                   </a>
+                              </li>
+                              <li class="hsoub-sidebar-menu-item ">
+                                   <a class="d-flex w-100 bd-highlight" href="/marketing">
+
+                                        <i class="ps-3 fs-3 fa-solid fa-bookmark"></i>
+                                        <p class="titel-list w-100 bd-highlight ">تصنيف الموزعين </p>
+                                   </a>
+                              </li>
+
+                              <li class="hsoub-sidebar-menu-item ">
+                                   <a class="d-flex w-100 bd-highlight" href="/business" routerLinkActive="actives"
+                                        [routerLinkActiveOptions]="{exact:true}">
+
+                                        <i class="ps-3 fs-3 fa-solid fa-bookmark"></i>
+                                        <p class="titel-list w-100 bd-highlight ">انواع الزيارات </p>
+
+
+                                   </a>
+                              </li>
+                              <li class="hsoub-sidebar-menu-item ">
+                                   <a class="d-flex w-100 bd-highlight" href="/programming" routerLinkActive="actives"
+                                        [routerLinkActiveOptions]="{exact:true}">
+
+                                        <i class="ps-3 fs-3 fa-solid fa-bookmark"></i>
+
+                                        <p class="titel-list w-100 bd-highlight ">العروض والمسابقات </p>
+
+                                   </a>
+                              </li>
+                              <li class="hsoub-sidebar-menu-item ">
+                                   <a class="d-flex w-100 bd-highlight" href="/marketing" routerLinkActive="actives"
+                                        [routerLinkActiveOptions]="{exact:true}">
+
+                                        <i class="ps-3 fs-3 fa-solid fa-bookmark"></i>
+                                        <p class="titel-list w-100 bd-highlight ">قوائم اسعار الشركات </p>
+
+
+                                   </a>
+                              </li>
+                         </ul>
+                    </div>
+               </div>
+          </div>
+
+
+          <!-- التقارير -->
+          <div class="sidenav-item" id="flush-heading8">
+               <a class="sidenave-nav-link" routerLink="Main" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{exact:true}" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapse-2-Four" aria-expanded="false" aria-controls="flush-collapse-2-Four">
+                    <i class="sidenave-link-icon fa-solid fa-file"></i>
+                    <span class="sidenave-link-text" *ngIf="collapsed">التقارير</span>
+                    <i *ngIf="collapsed" class=" fa-solid fa-chevron-left"></i>
+               </a>
+
+               <div *ngIf="collapsed" id="flush-collapse-2-Four" class="accordion-collapse collapse"
+                    aria-labelledby="flush-heading8" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                         <ul class="hsoub-sidebar-menu">
+
+                              <li class="hsoub-sidebar-menu-item ">
+                                   <a class="d-flex w-100 bd-highlight" href="/programming" routerLinkActive="actives"
+                                        [routerLinkActiveOptions]="{exact:true}">
+
+                                        <i class="px-2 fa-solid fa-house-flag"></i>
+                                        <p class="  bd-highlight "> تقرير الفنيين الجدد </p>
+                                   </a>
+                              </li>
+                              <li class="hsoub-sidebar-menu-item ">
+                                   <a class="d-flex w-100 bd-highlight" href="/marketing" routerLinkActive="actives"
+                                        [routerLinkActiveOptions]="{exact:true}">
+
+                                        <i class="fa-solid fa-house-flag"></i>
+                                        <p class="    bd-highlight "> تقرير الفنيين المتوقفين </p>
+
+                                   </a>
+                              </li>
+
+                              <li class="hsoub-sidebar-menu-item ">
+                                   <a class="d-flex w-100 bd-highlight" href="/marketing" routerLinkActive="actives"
+                                        [routerLinkActiveOptions]="{exact:true}">
+
+                                        <i class="px-2 fa-solid fa-house-flag"></i>
+                                        <p class="titel-list w-100 bd-highlight "> تقرير التجار الجدد </p>
+
+                                   </a>
+                              </li>
+
+
+                              <li class="hsoub-sidebar-menu-item ">
+                                   <a class="d-flex w-100 bd-highlight" href="/marketing" routerLinkActive="actives"
+                                        [routerLinkActiveOptions]="{exact:true}">
+
+                                        <i class="px-2 fa-solid fa-house-flag"></i>
+                                        <p class="titel-list w-100 bd-highlight "> تقرير التجار المتوقفين </p>
+
+                                   </a>
+                              </li>
+
+                         </ul>
+                    </div>
+               </div>
+          </div>
+
+
+
+     </ul>
+
+
+</div>

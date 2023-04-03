@@ -1,0 +1,26 @@
+<div class="sidenav" [ngClass]="collapsed?'sidenave-collapsed':''">
+     <div class="logo-container">
+          <button class="logo" (click)="togglecollapse()">G</button>
+          <div class="logo-text" *ngIf="collapsed">الجولف</div>
+          <button class="btn-close" *ngIf="collapsed" (click)="closeSidenav()">
+               <i class="fa-solid fa-xmark"></i>
+          </button>
+     </div>
+
+     <ul class="sidenave-nav">
+     <!--الرئيسية  -->
+          <li class="sidenav-item" >
+              <a  class="sidenave-nav-link"  routerLink="Main"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{exact:true}"
+              >
+               <i class="sidenave-link-icon fa-solid fa-house"></i>
+               <span class="sidenave-link-text" *ngIf="collapsed">الرئيسية</span>
+              </a>
+          </li>
+
+     </ul>
+     
+
+</div> 
+

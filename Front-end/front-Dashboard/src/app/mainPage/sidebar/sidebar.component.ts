@@ -1,25 +1,25 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { navbarData } from './nav-data';
-interface SideNavToggle{
+import { navbarData } from '../../test/nav-data';
+interface SideNavToggle {
   screenWidth: number;
   collapsed: boolean;
 }
-
 @Component({
-  selector: 'app-test',
-  templateUrl: './test.component.html',
-  styleUrls: ['./test.component.css']
+  selector: 'app-sidebar',
+  templateUrl: './sidebar.component.html',
+  styleUrls: ['./sidebar.component.css']
 })
-export class TestComponent {
+export class SidebarComponent {
+
   @Output() onToggleSideNav: EventEmitter<SideNavToggle> = new EventEmitter();
-  
+
   collapsed = false;
   // collapsed = true;
-  screenWidth=0;
+  screenWidth = 0;
   navData = navbarData
 
   togglecollapse(): void {
-this.collapsed = !this.collapsed;
+    this.collapsed = !this.collapsed;
     this.onToggleSideNav.emit({
       collapsed: this.collapsed, screenWidth: this.screenWidth
     })
@@ -32,6 +32,3 @@ this.collapsed = !this.collapsed;
     })
   }
 }
-
-
-
