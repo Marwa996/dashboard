@@ -43,6 +43,8 @@ import { NewTechniciansComponent } from './reports/new-technicians/new-technicia
 import { DiscontinuedTechniciansComponent } from './reports/discontinued-technicians/discontinued-technicians.component';
 import { NewTradersComponent } from './reports/new-traders/new-traders.component';
 import { DiscontinuedMerchantsComponent } from './reports/discontinued-merchants/discontinued-merchants.component';
+import { HeadertabelComponent } from './headertabel/headertabel.component';
+import { BodytabelComponent } from './bodytabel/bodytabel.component';
 
 @NgModule({
   declarations: [
@@ -86,7 +88,9 @@ import { DiscontinuedMerchantsComponent } from './reports/discontinued-merchants
         NewTechniciansComponent,
         DiscontinuedTechniciansComponent,
         NewTradersComponent,
-        DiscontinuedMerchantsComponent
+        DiscontinuedMerchantsComponent,
+        HeadertabelComponent,
+        BodytabelComponent
   ],
   imports: [
     BrowserModule,

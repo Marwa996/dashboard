@@ -1,0 +1,47 @@
+<div class="table-responsive">
+     <table class="table table-striped table-bordered" *ngFor="let data of Datatebal">
+
+          <thead>
+               <tr >
+                    <th class=" text-center fw-bold">{{data.headtabel.Data1}}</th>
+                    <th class=" text-center fw-bold">{{data.headtabel.Data2}}</th>
+                    <th class=" text-center fw-bold">{{data.headtabel.Data3}} </th>
+                    <th class=" text-center fw-bold">{{data.headtabel.Data4}}</th>
+                    <th class=" text-center fw-bold">{{data.headtabel.Data5}}  </th>
+                    <th class=" text-center fw-bold"> {{data.headtabel.Data6}} </th>
+                    <th class=" text-center fw-bold">{{data.headtabel.Data7}}</th>
+                    <th class=" text-center fw-bold" *ngIf="data.headtabel.Data8">{{data.headtabel.Data8}}</th>
+
+               </tr>
+          </thead>
+          <tbody>
+               <tr class="md" *ngFor="let data of data.bodytabel">
+                    <td class="text-center text-dark fw-semibold pt-3"> {{data.Data1}}</td>
+                    <td class="text-center text-dark fw-semibold pt-3"> {{data.Data2}} </td>
+                    <td class="text-center text-dark fw-semibold pt-3"> {{data.Data3}} </td>
+                    <td class=" text-center text-dark fw-semibold pt-3">
+                         <div class="btn-group">
+                              <button type="button" class="btn btn-success text-center  " aria-expanded="false">
+                                   {{data.Data4}}
+                              </button>
+          
+                         </div>
+                    </td>
+                    <td class="text-center text-dark fw-semibold pt-3">{{data.Data5}} </td>
+                    <td class="text-center text-dark fw-semibold pt-3">{{data.Data6}}</td>
+
+                    <td class="text-center">
+              
+                              <button (click)="show()">
+                                   <i class="fa-solid fa-gear"></i>
+                              </button>
+                             
+                    </td>
+
+                    <td class="text-center text-dark fw-semibold pt-3" *ngIf="data.Data7">{{data.Data7}}</td>
+               </tr>
+
+          </tbody>
+          
+          </table>
+          </div>
