@@ -1,8 +1,8 @@
 <div class="sidenav" [ngClass]="collapsed?'sidenave-collapsed':''">
      <div class="logo-container">
-          <button class="logo" (click)="togglecollapse()">G</button>
-          <div class="logo-text" *ngIf="collapsed">الجولف</div>
-          <button class="btn-close" *ngIf="collapsed" (click)="closeSidenav()">
+          <button class="logo" (click)="togglecollapse()">الجولف</button>
+          
+          <button class="btns-close" *ngIf="collapsed" (click)="closeSidenav()">
                <i class="fa-solid fa-xmark"></i>
           </button>
      </div>
@@ -27,7 +27,7 @@
                     data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                     <i class="sidenave-link-icon fa fa-fw fa-cubes"></i>
                     <span class="sidenave-link-text" *ngIf="collapsed">المنتجات</span>
-                    <i *ngIf="collapsed" class=" fa-solid fa-chevron-left"></i>
+                    <i *ngIf="collapsed" class="arrow_dowen fa-solid fa-chevron-left"></i>
                </a>
 
                <div *ngIf="collapsed" id="flush-collapseOne" class="accordion-collapse collapse"
@@ -35,7 +35,7 @@
                     <div class="accordion-body">
                          <ul class="hsoub-sidebar-menu">
                               <li class="hsoub-sidebar-menu-item ">
-                                   <a class="d-flex w-100 bd-highlight" routerLink="" routerLinkActive="actives"
+                                   <a class="d-flex w-100 bd-highlight" routerLink="Categories" routerLinkActive="actives"
                                         [routerLinkActiveOptions]="{exact:true}">
 
                                         <i class="ps-3 fs-3 fa-solid fa-chart-simple"></i>
@@ -78,7 +78,7 @@
                     data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
                     <i class="sidenave-link-icon fa-solid fa-users"></i>
                     <span class="sidenave-link-text" *ngIf="collapsed">المستخدمين</span>
-                    <i *ngIf="collapsed" class=" fa-solid fa-chevron-left p-2 flex-shrink-1 bd-highlight"></i>
+                    <i *ngIf="collapsed" class="arrow2_dowen fa-solid fa-chevron-left"></i>
                </a>
 
 
@@ -157,7 +157,7 @@
                     data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
                     <i class="sidenave-link-icon  fa-solid fa-clipboard-list"></i>
                     <span class="sidenave-link-text" *ngIf="collapsed">قائمة العملاء</span>
-                    <i *ngIf="collapsed" class=" fa-solid fa-chevron-left p-2 flex-shrink-1 bd-highlight"></i>
+                    <i *ngIf="collapsed" class="arrow4_dowen fa-solid fa-chevron-left"></i>
                </a>
 
 
@@ -215,7 +215,7 @@
                     data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
                     <i class="sidenave-link-icon  fa-solid fa-earth-asia"></i>
                     <span class="sidenave-link-text" *ngIf="collapsed">المناطق </span>
-                    <i *ngIf="collapsed" class=" fa-solid fa-chevron-left p-2 flex-shrink-1 bd-highlight"></i>
+                    <i *ngIf="collapsed" class="arrow_dowen fa-solid fa-chevron-left"></i>
                </a>
 
 
@@ -256,7 +256,7 @@
                     data-bs-target="#flush-collapsefive" aria-expanded="false" aria-controls="flush-collapsefive">
                     <i class="sidenave-link-icon  fa-solid fa-gift"></i>
                     <span class="sidenave-link-text" *ngIf="collapsed">الهدايا </span>
-                    <i *ngIf="collapsed" class=" fa-solid fa-chevron-left p-2 flex-shrink-1 bd-highlight"></i>
+                    <i *ngIf="collapsed" class="arrow1_dowen fa-solid fa-chevron-left"></i>
                </a>
 
 
@@ -334,7 +334,7 @@
                     data-bs-target="#flush-collapse-2-One" aria-expanded="false" aria-controls="flush-collapse-2-One">
                     <i class="sidenave-link-icon fa-solid fa-house-flag"></i>
                     <span class="sidenave-link-text" *ngIf="collapsed">الزيارات</span>
-                    <i *ngIf="collapsed" class=" fa-solid fa-chevron-left"></i>
+                    <i *ngIf="collapsed" class="arrow_dowen fa-solid fa-chevron-left"></i>
                </a>
 
                <div *ngIf="collapsed" id="flush-collapse-2-One" class="accordion-collapse collapse"
@@ -376,7 +376,7 @@
                     data-bs-target="#flush-collapse-2-Two" aria-expanded="false" aria-controls="flush-collapse-2-Two">
                     <i class="sidenave-link-icon fa-solid fa-gears"></i>
                     <span class="sidenave-link-text" *ngIf="collapsed">الاعدادات</span>
-                    <i *ngIf="collapsed" class=" fa-solid fa-chevron-left"></i>
+                    <i *ngIf="collapsed" class="arrow3_dowen fa-solid fa-chevron-left"></i>
                </a>
 
                <div *ngIf="collapsed" id="flush-collapse-2-Two" class="accordion-collapse collapse"
@@ -455,7 +455,7 @@
                     data-bs-target="#flush-collapse-2-Four" aria-expanded="false" aria-controls="flush-collapse-2-Four">
                     <i class="sidenave-link-icon fa-solid fa-file"></i>
                     <span class="sidenave-link-text" *ngIf="collapsed">التقارير</span>
-                    <i *ngIf="collapsed" class=" fa-solid fa-chevron-left"></i>
+                    <i *ngIf="collapsed" class="arrow_dowen fa-solid fa-chevron-left"></i>
                </a>
 
                <div *ngIf="collapsed" id="flush-collapse-2-Four" class="accordion-collapse collapse"

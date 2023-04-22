@@ -56,12 +56,6 @@ export class GiftReportsComponent implements OnInit {
   }
 
 
-  
-  show_data2() {
-
-    console.log('Doaa Gamal')
-  }
-
 
  show_data3() {
 

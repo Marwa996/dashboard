@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { navbarData } from '../../test/nav-data';
+import { navbarData } from '../../test/nav2/nav-data';
 interface SideNavToggle {
   screenWidth: number;
   collapsed: boolean;
@@ -24,6 +24,7 @@ export class SidebarComponent {
       collapsed: this.collapsed, screenWidth: this.screenWidth
     })
   }
+ 
 
   closeSidenav(): void {
     this.collapsed = false;

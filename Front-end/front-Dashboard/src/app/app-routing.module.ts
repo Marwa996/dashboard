@@ -35,6 +35,7 @@ import { MarketingDelegatesComponent } from './users/marketing-delegates/marketi
 import { SystemUsersComponent } from './users/system-users/system-users.component';
 import { DistributorsVisitsComponent } from './visits/distributors-visits/distributors-visits.component';
 import { TradersVisitsComponent } from './visits/traders-visits/traders-visits.component';
+import { CategoriesComponent } from './product/categories/categories.component';
 
 const routes: Routes = [
   // ************************* Login  *****************
@@ -48,6 +49,7 @@ const routes: Routes = [
       { path: 'Main', component: MainPageComponent },
       { path: 'pricelist', component: PriceListComponent },
       { path: 'product', component: ProductsComponent },
+      { path: 'Categories', component: CategoriesComponent },
       { path: 'customers', component: CustomersComponent },
       { path: 'Distributors', component: DistributorsComponent },
       { path: 'Merchants', component: MerchantsComponent },

@@ -2,14 +2,6 @@
      width: 0rem;
 }
 
-/* ::-webkit-scrollbar-track{
-     background-color:#8690a3;
-      
-}
-
-::-webkit-scrollbar-thumb{
-     background-color:rgba(205, 166, 242, 0.649);
-} */
 
 .sidenav {
      background: #263238;
@@ -17,10 +9,9 @@
      position: fixed;
      z-index: 1;
      top: 0;
-     margin-top: 4.5rem;
+     /* margin-top: 4.5rem; */
      width: 5rem;
      height: 100vh;
-     /* height: 200%; */
      box-shadow: 0.063rem 0 1.25rem 0 #8690a3;
      overflow: auto;
      padding-bottom: 15%;
@@ -31,43 +22,45 @@
      align-items: center;
      padding: 0.938rem 0.938rem 0 0.938rem;
      width: 100%;
+     margin-top: 5.5rem;
 }
 
 .logo {
-     background: #fff;
+background-image: linear-gradient(to right, #647dee, #7f53ac);
      text-align: center;
      min-width: 3rem;
      border-radius: 0.313rem;
-     padding: 0.313rem;
-     font-size: 1.5rem;
+     padding: 0.312rem;
+     font-size: 0.9rem;
      cursor: pointer;
      border: none;
-
-}
-
-.logo-text {
-     margin-left: 1.5rem;
-     margin-right: 1.5rem;
-     font-size: 2rem;
      font-weight: 500;
-     color: #fff;
-
+     padding-top: 0.9rem;
+     padding-bottom: 0.9rem;
+     color: white;
+     
+       
 }
 
-.btn-close {
+.btns-close {
      margin-left: auto;
      cursor: pointer;
-     width: 2rem;
-     height: 2rem;
-     border-radius: 50%;
-     background-color: transparent;
+     min-width: 10rem;
+     width: 6rem;
+     height: 3rem;
+     border-radius: 0.625rem;
      border: none;
+     margin-right: 1rem;
+     background-color: rgba(255, 0, 0, 0.825);
 
 }
+
+
 
 .fa-xmark {
      color: #fff !important;
      font-size: 1.5rem !important;
+     padding: 0 2rem ;
 }
 
 .sidenave-collapsed {
@@ -86,7 +79,6 @@
 }
 
 .sidenav-item {
-     /* width: 100%; */
      margin-bottom: 0.625rem;
 }
 
@@ -145,4 +137,20 @@ a {
 .actives {
      color: #000;
      ;
+}
+
+.arrow_dowen{
+     margin-right: 5.4rem !important;
+}
+.arrow1_dowen {
+     margin-right: 6rem !important;
+}
+.arrow2_dowen {
+     margin-right: 3.8rem !important;
+}
+.arrow3_dowen {
+     margin-right: 4.5rem !important;
+}
+.arrow4_dowen {
+     margin-right: 3.7rem !important;
 }

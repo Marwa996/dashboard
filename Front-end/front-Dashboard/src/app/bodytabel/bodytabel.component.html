@@ -3,23 +3,23 @@
 
           <thead>
                <tr >
-                    <th class=" text-center fw-bold">{{data.headtabel.Data1}}</th>
-                    <th class=" text-center fw-bold">{{data.headtabel.Data2}}</th>
-                    <th class=" text-center fw-bold">{{data.headtabel.Data3}} </th>
-                    <th class=" text-center fw-bold">{{data.headtabel.Data4}}</th>
-                    <th class=" text-center fw-bold">{{data.headtabel.Data5}}  </th>
-                    <th class=" text-center fw-bold"> {{data.headtabel.Data6}} </th>
-                    <th class=" text-center fw-bold">{{data.headtabel.Data7}}</th>
-                    <th class=" text-center fw-bold" *ngIf="data.headtabel.Data8">{{data.headtabel.Data8}}</th>
+                    <th class=" text-center fw-bold" *ngIf="data.headtabel.Data1">{{data.headtabel.Data1}}</th>
+                    <th class=" text-center fw-bold" *ngIf="data.headtabel.Data2">{{data.headtabel.Data2}}</th>
+                    <th class=" text-center fw-bold" *ngIf="data.headtabel.Data3">{{data.headtabel.Data3}} </th>
+                    <th class=" text-center fw-bold" *ngIf="data.headtabel.Data4">{{data.headtabel.Data4}}</th>
+                    <th class=" text-center fw-bold" *ngIf="data.headtabel.Data5">{{data.headtabel.Data5}}  </th>
+                    <th class=" text-center fw-bold" *ngIf="data.headtabel.Data6"> {{data.headtabel.Data6}} </th>
+                    <th class=" text-center fw-bold" *ngIf="data.headtabel.Data7">{{data.headtabel.Data7}}</th>
+                    <th class=" text-center fw-bold" *ngIf="data.headtabel.Data8">{{data.headtabel.Data8}}</th><th class=" text-center fw-bold" *ngIf="data.headtabel.Data9">{{data.headtabel.Data9}}</th>
 
                </tr>
           </thead>
           <tbody>
                <tr class="md" *ngFor="let data of data.bodytabel">
-                    <td class="text-center text-dark fw-semibold pt-3"> {{data.Data1}}</td>
-                    <td class="text-center text-dark fw-semibold pt-3"> {{data.Data2}} </td>
-                    <td class="text-center text-dark fw-semibold pt-3"> {{data.Data3}} </td>
-                    <td class=" text-center text-dark fw-semibold pt-3">
+                    <td class="text-center text-dark fw-semibold pt-3"*ngIf="data.Data1"> {{data.Data1}}</td>
+                    <td class="text-center text-dark fw-semibold pt-3"*ngIf="data.Data2"> {{data.Data2}} </td>
+                    <td class="text-center text-dark fw-semibold pt-3" *ngIf="data.Data3"> {{data.Data3}} </td>
+                    <td class=" text-center text-dark fw-semibold pt-3" *ngIf="data.Data4">
                          <div class="btn-group">
                               <button type="button" class="btn btn-success text-center  " aria-expanded="false">
                                    {{data.Data4}}
@@ -27,10 +27,10 @@
           
                          </div>
                     </td>
-                    <td class="text-center text-dark fw-semibold pt-3">{{data.Data5}} </td>
-                    <td class="text-center text-dark fw-semibold pt-3">{{data.Data6}}</td>
+                    <td class="text-center text-dark fw-semibold pt-3" *ngIf="data.Data5">{{data.Data5}} </td>
+                    <td class="text-center text-dark fw-semibold pt-3" *ngIf="data.Data6">{{data.Data6}}</td>
 
-                    <td class="text-center">
+                    <td class="text-center" >
               
                               <button (click)="show()">
                                    <i class="fa-solid fa-gear"></i>
@@ -39,6 +39,21 @@
                     </td>
 
                     <td class="text-center text-dark fw-semibold pt-3" *ngIf="data.Data7">{{data.Data7}}</td>
+                    
+                    <td class="text-center text-dark fw-semibold pt-3" *ngIf="data.Data8">
+                         <div class="dropdown">
+                              <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                                   aria-expanded="false">
+                                   Dropdown link
+                              </a>
+                         
+                              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                   <li><a class="dropdown-item" href="#">Action</a></li>
+                                   <li><a class="dropdown-item" href="#">Another action</a></li>
+                                   <li><a class="dropdown-item" href="#">Something else here</a></li>
+                              </ul>
+                         </div>
+                    </td>
                </tr>
 
           </tbody>

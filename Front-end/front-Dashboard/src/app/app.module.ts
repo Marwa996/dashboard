@@ -8,7 +8,7 @@ import { SidebarComponent } from './mainPage/sidebar/sidebar.component';
 import { LoginComponent } from './login/login.component';
 import { MainPageComponent } from './mainPage/main-page/main-page.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { TestComponent } from './test/test.component';
+import { TestComponent } from './test/nav2/test.component';
 import { PriceListComponent } from './product/price-list/price-list.component';
 import { ProductsComponent } from './product/products/products.component';
 import { MainlayoutComponent } from './layout/mainlayout/mainlayout.component';
@@ -43,9 +43,12 @@ import { NewTechniciansComponent } from './reports/new-technicians/new-technicia
 import { DiscontinuedTechniciansComponent } from './reports/discontinued-technicians/discontinued-technicians.component';
 import { NewTradersComponent } from './reports/new-traders/new-traders.component';
 import { DiscontinuedMerchantsComponent } from './reports/discontinued-merchants/discontinued-merchants.component';
+
 import { HeadertabelComponent } from './headertabel/headertabel.component';
 import { BodytabelComponent } from './bodytabel/bodytabel.component';
-import { CategoriesComponent } from './product/categories/categories.component';
+import { SublevelMenuComponent } from './test/nav2/sublevel-menu.component';
+import { ProductsPricesComponent } from './product/products-prices/products-prices.component';
+import { CollapsProductPriceTablesComponent } from './product/products-prices/collaps-product-price-tables.component';
 
 @NgModule({
   declarations: [
@@ -56,40 +59,44 @@ import { CategoriesComponent } from './product/categories/categories.component';
     MainPageComponent,
     PriceListComponent,
     ProductsComponent,
-    TestComponent,
     MainlayoutComponent,
-  
+    TestComponent,
     MainBodyComponent,
-        GeneralSupervisorComponent,
-        DirectorMarketingComponent,
-        CustomerManagerComponent,
-        MarketingDelegatesComponent,
-        CustomerRepresentativesComponent,
-        SystemUsersComponent,
-        DistributorsComponent,
-        MerchantsComponent,
-        TechniciansComponent,
-        CustomersComponent,
-        ProvincesComponent,
-        CentersComponent,
-        GiftsComponent,
-        GiftReportsComponent,
-        RequestsComponent,
-        ClosedComplaintsComponent,
-        ClosedRequestsComponent,
-        InvoicesComponent,
-        TradersVisitsComponent,
-        DistributorsVisitsComponent,
-        CouponsComponent,
-        TradersRatingComponent,
-        DistributorsRatingComponent,
-        TypesVisitsComponent,
-        OffersContestsComponent,
-        CompanyPriceListsComponent,
-        NewTechniciansComponent,
-        DiscontinuedTechniciansComponent,
-        NewTradersComponent,
-        DiscontinuedMerchantsComponent
+    GeneralSupervisorComponent,
+    DirectorMarketingComponent,
+    CustomerManagerComponent,
+    MarketingDelegatesComponent,
+    CustomerRepresentativesComponent,
+    SystemUsersComponent,
+    DistributorsComponent,
+    MerchantsComponent,
+    TechniciansComponent,
+    CustomersComponent,
+    ProvincesComponent,
+    CentersComponent,
+    GiftsComponent,
+    GiftReportsComponent,
+    RequestsComponent,
+    ClosedComplaintsComponent,
+    ClosedRequestsComponent,
+    InvoicesComponent,
+    TradersVisitsComponent,
+    DistributorsVisitsComponent,
+    CouponsComponent,
+    TradersRatingComponent,
+    DistributorsRatingComponent,
+    TypesVisitsComponent,
+    OffersContestsComponent,
+    CompanyPriceListsComponent,
+    NewTechniciansComponent,
+    DiscontinuedTechniciansComponent,
+    NewTradersComponent,
+    DiscontinuedMerchantsComponent,
+    BodytabelComponent,
+    HeadertabelComponent,
+    SublevelMenuComponent,
+    ProductsPricesComponent,
+    CollapsProductPriceTablesComponent
   ],
   imports: [
     BrowserModule,

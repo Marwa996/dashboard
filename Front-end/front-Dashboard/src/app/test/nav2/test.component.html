@@ -9,18 +9,20 @@
 
      <ul class="sidenave-nav">
      <!--الرئيسية  -->
-          <li class="sidenav-item" >
-              <a  class="sidenave-nav-link"  routerLink="Main"
+          <li class="sidenav-item" *ngFor="let data of navData">
+              <a  class="sidenave-nav-link"  [routerLink]="[data.routelink]"
               routerLinkActive="active"
               [routerLinkActiveOptions]="{exact:true}"
               >
-               <i class="sidenave-link-icon fa-solid fa-house"></i>
-               <span class="sidenave-link-text" *ngIf="collapsed">الرئيسية</span>
+               <i class="sidenave-link-icon" [class]="data.icon"></i>
+               <span class="sidenave-link-text" *ngIf="collapsed">{{data.label}}</span>
               </a>
+              
           </li>
 
      </ul>
      
 
 </div> 
+
 
