@@ -1,7 +1,8 @@
+
 <div class="sidenav" [ngClass]="collapsed?'sidenave-collapsed':''">
      <div class="logo-container">
           <button class="logo" (click)="togglecollapse()">الجولف</button>
-          
+
           <button class="btns-close" *ngIf="collapsed" (click)="closeSidenav()">
                <i class="fa-solid fa-xmark"></i>
           </button>
@@ -396,7 +397,7 @@
                               </li>
                               <li class="hsoub-sidebar-menu-item ">
                                    <a class="d-flex w-100 bd-highlight" routerLink="TradersRating" routerLinkActive="actives"
-                                        [routerLinkActiveOptions]="{exact:true}">
+                                  [routerLinkActiveOptions]="{exact:true}">
 
                                         <i class="ps-3 fs-3 fa-solid fa-bookmark"></i>
 
@@ -508,8 +509,14 @@
           </div>
 
 
-
+<!-- form -->
+<li class="sidenav-item">
+  <a class="sidenave-nav-link" routerLink="./form" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+    <i class="sidenave-link-icon fa-solid fa-paste"></i>
+    <span class="sidenave-link-text" *ngIf="collapsed">form </span>
+  </a>
+</li>
      </ul>
 
-
 </div>
+

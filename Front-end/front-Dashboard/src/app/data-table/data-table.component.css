@@ -1,0 +1,14 @@
+table{
+     width: 100%;
+}
+mat-form-field{
+     font-size: 2rem;
+     width:20% ;
+}
+
+.input-full-width{
+     width: 100%;
+}
+/* #mat-paginator-page-size-label-0{
+     color: white !important;
+} */

@@ -12,6 +12,7 @@ export class MainBodyComponent {
 
   getBodyClass(): string {
     let styleCalass = '';
+    
     if (this.collapsed && this.screenWidth > 768) {
       styleCalass = 'body-trimmed'
     } else if (this.collapsed && this.screenWidth <= 768 && this.screenWidth > 0) {
@@ -19,4 +20,7 @@ export class MainBodyComponent {
     }
     return styleCalass;
   }
+
+
+
 }

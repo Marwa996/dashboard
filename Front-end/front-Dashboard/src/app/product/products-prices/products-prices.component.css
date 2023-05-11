@@ -15,7 +15,7 @@
      text-decoration: none;
      color: white;
      display: flex;
-     /* align-items: flex-end; */
+     align-items: flex-end;
 
 }
 
@@ -40,7 +40,7 @@
      padding: 1.5rem !important;
 }
 
-.alert-styel {
+.alert-styel,.button-styel {
      background-color: #647dee9f;
      text-align: center !important;
      color: white;
@@ -55,4 +55,24 @@
      display: flex;
      margin: 0 auto;
      width: 70%;
+}
+
+.button-styel{
+          width: 20%;
+          padding:0.5rem;
+          margin: 0 auto;
+          border-style: none;
+          font-size: 1rem;
+          border-radius: 0.625rem;
+          box-shadow: 0.063rem 0 1.25rem 0 #8690a3;
+          cursor: pointer;
+}
+.btns{
+     background-color: #8053acb8;
+     width: 10%;
+}
+
+.top{
+     z-index: 3!important;
+     top: 0;
 }

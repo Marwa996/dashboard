@@ -1,0 +1,11 @@
+.sizeslider{
+     width: 5rem;
+     height: 100vh;
+     background-color: aquamarine;
+}
+
+.sizebody{
+     width:100rem ;
+     height: 100vh;
+     background-color: rgb(127, 138, 255);
+}

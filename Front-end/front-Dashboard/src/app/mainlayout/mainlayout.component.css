@@ -1,0 +1,20 @@
+.sidenavmain1{
+     width: 5rem;
+     height: 100vh;
+}
+
+.sidenave-collapsedmain1{
+     width: 16.5625rem;
+}
+
+.sidenavmain2 {
+     width: calc(100% -5rem) !important;
+     margin-right: 5rem;
+    
+}
+
+.sidenave-collapsedmain2 {
+     width: calc(100% -16.5625rem) !important;
+     margin-right: 16.5625rem;
+
+}

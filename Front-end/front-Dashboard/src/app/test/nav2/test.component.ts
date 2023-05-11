@@ -11,27 +11,46 @@ interface SideNavToggle{
   styleUrls: ['./test.component.css']
 })
 export class TestComponent {
-  @Output() onToggleSideNav: EventEmitter<SideNavToggle> = new EventEmitter();
+ 
+  // @Output() onToggleSideNav: EventEmitter<SideNavToggle> = new EventEmitter();
   
-  collapsed = false;
+  // collapsed = false;
   // collapsed = true;
-  screenWidth=0;
-  navData = navbarData
+  // screenWidth=0;
+  // navData = navbarData
 
 
  
+//   togglecollapse(): void {
+// this.collapsed = !this.collapsed;
+//     this.onToggleSideNav.emit({
+//       collapsed: this.collapsed, screenWidth: this.screenWidth
+//     })
+//   }
+
+  // closeSidenav(): void {
+  //   this.collapsed = false;
+  //   this.onToggleSideNav.emit({
+  //     collapsed: this.collapsed, screenWidth: this.screenWidth
+  //   })
+  // }
+
+// 
+
+  collapsed = false;
+  // collapsed = true;
+  screenWidth = 0;
+  navData = navbarData
+
   togglecollapse(): void {
-this.collapsed = !this.collapsed;
-    this.onToggleSideNav.emit({
-      collapsed: this.collapsed, screenWidth: this.screenWidth
-    })
+    this.collapsed = !this.collapsed;
+    
   }
+
 
   closeSidenav(): void {
     this.collapsed = false;
-    this.onToggleSideNav.emit({
-      collapsed: this.collapsed, screenWidth: this.screenWidth
-    })
+    
   }
 }
 

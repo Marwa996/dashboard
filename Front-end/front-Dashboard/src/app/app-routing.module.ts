@@ -4,7 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { MainPageComponent } from './mainPage/main-page/main-page.component';
 import { PriceListComponent } from './product/price-list/price-list.component';
 import { ProductsComponent } from './product/products/products.component';
-import { MainlayoutComponent } from './layout/mainlayout/mainlayout.component';
+import { MainlayoutComponent } from './mainlayout/mainlayout.component';
 import { CustomersComponent } from './customer-list/customers/customers.component';
 import { DistributorsComponent } from './customer-list/distributors/distributors.component';
 import { MerchantsComponent } from './customer-list/merchants/merchants.component';
@@ -36,6 +36,7 @@ import { SystemUsersComponent } from './users/system-users/system-users.componen
 import { DistributorsVisitsComponent } from './visits/distributors-visits/distributors-visits.component';
 import { TradersVisitsComponent } from './visits/traders-visits/traders-visits.component';
 import { CategoriesComponent } from './product/categories/categories.component';
+import { NewFormComponent } from './test/new-form/new-form.component';
 
 const routes: Routes = [
   // ************************* Login  *****************
@@ -80,6 +81,7 @@ const routes: Routes = [
       { path: 'SystemUsers', component: SystemUsersComponent },
       { path: 'DistributorsVisits', component: DistributorsVisitsComponent },
       { path: 'TradersVisits', component: TradersVisitsComponent },
+      { path: 'form', component: NewFormComponent },
 
     ]
   }

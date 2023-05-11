@@ -1,0 +1,106 @@
+<p>new-form works!</p>
+
+
+<!-- <form novalidate [formGroup]="FormGroup">
+<div class="row">
+     <div class="col-xs-12 form-group-marL40">
+          <div style="margin-top: 0px;" formGroupName="itemRows">
+          <div class="row panel-heading accordion-body">form Detalis</div>
+               <ng-container *ngIf="FormGroup.controls['itemRows']!=null">
+                    <div *ngFor="let itemRow of FormGroup.controls['itemRows'].controls; let i=index" [formGroupName]="i">
+                         <div class="row">
+                             
+                              <div class="col-md-2 form-group">
+                                   <input matInput placeholder="Nam" formControlName="Name">
+                              </div>
+                            
+                              <div class="col-md-2 form-group">
+                                   <input matInput placeholder="RollNo" formControlName="RollNo">
+                              </div>
+                             
+                              <div class="col-md-2 form-group">
+                                   <input matInput placeholder="Class" formControlName="Class">
+                              </div>
+                              
+                              <div class="col-md-2 form-group">
+                                   <input matInput placeholder="mobileNo" formControlName="mobileNo">
+                              </div>
+
+                             
+                              <div class="col-md-2 form-group">
+                                   <button class="btn btn-danger" (click)="deleteRow(i)">×</button>
+                              </div>
+                         </div>
+
+                    </div>
+               </ng-container>
+               <div class="form-group" style="text-align:right ;">
+                    <button type="button" (click)="addRowe()" class="btn btn-primary">Add Rowe</button>
+
+               </div>
+
+
+          </div>
+     </div>
+</div>
+</form> -->
+
+
+<hr> New form 2
+
+
+<form [formGroup]="nemform" #form>
+     <ng-container *ngFor="let x of arry; index as i">
+          {{i}}
+     <ng-container [formGroupName]="i" >
+     <div>
+          <label>Name:</label>
+          <input type="text" formControlName="Name" >
+     </div>
+     <div>
+          <label>Email:</label>
+          <input type="email" formControlName="RollNo">
+       
+     </div>
+     <div>
+          <label>Message:</label>
+          <textarea formControlName="mobileNo"></textarea>
+        
+     </div>
+</ng-container>
+</ng-container>
+</form>
+
+<button type="button" (click)="add()">add form</button>
+<button type="button" (click)="send(nemform)">send form</button>
+
+
+<hr> New form 3
+<form [formGroup]="nemform3" #form>
+     <ng-container *ngFor="let x of arry3; index as i">
+          {{i}}
+          <ng-container [formGroupName]="i">
+               <div>
+                    <label>Name:</label>
+                    <input type="text" formControlName="Name3" value="Doha">
+               </div>
+               <div>
+                    <label>Email:</label>
+                    <input type="email" formControlName="RollNo">
+
+               </div>
+               <div>
+                    <label>Message:</label>
+                    <textarea formControlName="mobileNo"></textarea>
+
+               </div>
+          </ng-container>
+     </ng-container>
+</form>
+
+<button type="button" (click)="add3()">add form</button>
+<button type="button" (click)="send3(nemform)">send form</button>
+
+
+
+<app-test></app-test>

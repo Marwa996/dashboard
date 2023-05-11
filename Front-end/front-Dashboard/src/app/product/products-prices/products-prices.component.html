@@ -1,36 +1,251 @@
+<div
+  class="product-price mt-5"
+  id="flush-heading1"
+  *ngFor="let Data of Categories; index as i"
+>
+  <div class="product-price-item">
+    <input type="text" value="#flush-heading {{ i + 1 }}" />
+    <a
+      class="product-price-link"
+      data-bs-toggle="collapse"
+      data-bs-target="#flush-collapse1"
+      aria-expanded="false"
+      aria-controls="flush-collapse1"
+      (click)="hided_collaps()"
+    >
+      <i class="arrow_dowen fa-solid fa-chevron-left"></i>
+      <span class="product-price-link-text">{{ Data.name_Categories }} </span>
+    </a>
+  </div>
 
-<div class="product-price mt-5" id="flush-headingOne">
-<div class="product-price-item" >
+  <div
+    id="flush-collapse1"
+    class="accordion-collapse collapse"
+    aria-labelledby="flush-heading1"
+    data-bs-parent="#accordionFlushExample"
+  >
+    <div class="accordion-body product-price-accordion-body">
+      <div class="product-price-accordion-body-item">
+        <div class="alert alert-styel" role="alert">
+          قم بوضع السعر الأساسي وسعر الكوبون وعدد النقاط لكل منتج
+          <span>*</span>
+        </div>
 
-     <a class="product-price-link" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
-          aria-expanded="false" aria-controls="flush-collapseOne">
-          <i class="arrow_dowen fa-solid fa-chevron-left"></i>
-          <span class="product-price-link-text" >رمادي بجوان</span>
-          
-     </a>
-</div>
+        <div class="table-responsive">
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+                <th class="text-center fw-bold" *ngIf="Datateba_Header.Data1">
+                  {{ Datateba_Header.Data1 }}
+                </th>
+                <th class="text-center fw-bold" *ngIf="Datateba_Header.Data2">
+                  {{ Datateba_Header.Data2 }}
+                </th>
+                <th class="text-center fw-bold" *ngIf="Datateba_Header.Data3">
+                  {{ Datateba_Header.Data3 }}
+                </th>
+                <th class="text-center fw-bold" *ngIf="Datateba_Header.Data4">
+                  {{ Datateba_Header.Data4 }}
+                </th>
+                <th class="text-center fw-bold" *ngIf="Datateba_Header.Data5">
+                  {{ Datateba_Header.Data5 }}
+                </th>
+                <th class="text-center fw-bold">خيارات</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="md" *ngFor="let databody of Data.Products">
+                <td
+                  class="text-center text-dark fw-semibold pt-3"
+                  *ngIf="databody.name_Product"
+                >
+                  {{ databody.name_Product }}
+                </td>
+                <td
+                  class="text-center text-dark fw-semibold pt-3"
+                  *ngIf="databody.Base_price"
+                >
+                  {{ databody.Base_price }}
+                </td>
+                <td
+                  class="text-center text-dark fw-semibold pt-3"
+                  *ngIf="databody.Coupon_price"
+                >
+                  {{ databody.Coupon_price }}
+                </td>
 
-     <div  id="flush-collapseOne" class="accordion-collapse collapse"
-          aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body product-price-accordion-body">
-               <div class="product-price-accordion-body-item">
-                    <div class="alert alert-styel" role="alert">
-                         قم بوضع السعر الأساسي وسعر الكوبون وعدد النقاط لكل منتج
-                         <span>*</span>
+                <td
+                  class="text-center text-dark fw-semibold pt-3"
+                  *ngIf="databody.points"
+                >
+                  {{ databody.points }}
+                </td>
+                <td
+                  class="text-center text-dark fw-semibold pt-3"
+                  *ngIf="databody.Coupon_type"
+                >
+                  {{ databody.Coupon_type }}
+                </td>
+
+                <td class="text-dark fw-semibold pt-3">
+                  <div class="d-flex justify-content-center">
+                    <div class="col-6 text-center">
+                      <i class="fa-sharp fa-solid fa-pencil"></i>
                     </div>
-                    <app-collaps-product-price-tables [Datatebal]="Datatebal2" ></app-collaps-product-price-tables>
-               </div>
-               
+                    <div class="col-6 text-center">
+                      <i class="fa-sharp fa-solid fa-trash"></i>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="d-flex justify-content-center mt-4">
+          <!-- Button trigger modal add prodect-->
+          <button type="button" class="button-styel" (click)="addProductCollapsed()">إضافة منتج</button>
+        </div>
+
+        <!-- Modal add prodect-->
+        <div class="modalContent p-5" *ngIf="add_product_collapsed">
+          <!-- button close -->
+          <div class="modalHeader pb-4">
+            <button type="button" class="btn-close"  (click)="addProductCollapsed()"></button>
           </div>
-     </div>
+          <!-- modal Body -->
+          <form class="modalBody" [formGroup]="addprodectform">
+            <div class="table-responsive">
+              <table class="table table-striped table-bordered">
+                <tbody>
+                  <tr class="md">
+                    <td class="text-center text-dark fw-semibold pt-3">
+                      <input
+                        formControlName="name_Product"
+                        type="text"
+                        class="form-control"
+                        placeholder="اسم المنتج"
+                        aria-label="First name"
+                      />
+                    </td>
+                    <td class="text-center text-dark fw-semibold pt-3">
+                      <input
+                        formControlName="Base_price"
+                        type="text"
+                        class="form-control"
+                        placeholder="السعر الاساسي"
+                        aria-label="Last name"
+                      />
+                    </td>
+                    <td class="text-center text-dark fw-semibold pt-3">
+                      <input
+                        formControlName="Coupon_price"
+                        type="text"
+                        class="form-control"
+                        placeholder="سعر الكوبون"
+                        aria-label="Last name"
+                      />
+                    </td>
+
+                    <td class="text-center text-dark fw-semibold pt-3">
+                      <input
+                        formControlName="points"
+                        type="text"
+                        class="form-control"
+                        placeholder=" النقاط"
+                        aria-label="Last name"
+                      />
+                    </td>
+                    <td class="text-center text-dark fw-semibold pt-3">
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                        formControlName="Coupon_type"
+                      >
+                        <option selected >نوع الكوبون</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </td>
+
+                    <td class="text-dark fw-semibold pt-3">
+                      <div class="d-flex justify-content-center">
+                        <div class="col-6 text-center">
+                          <i class="fa-sharp fa-solid fa-trash" ></i>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+
+
+                </tbody>
+              </table>
+            </div>
+          </form>
+
+          <form class="modalBody" [formGroup]="addprodectform2">
+            <div class="table-responsive">
+              <table class="table table-striped table-bordered">
+                <tbody>
+                  <tr class="md">
+                    <td class="text-center text-dark fw-semibold pt-3">
+                      <input formControlName="name_Product" type="text" class="form-control" placeholder="اسم المنتج"
+                        aria-label="First name" />
+                    </td>
+                    <td class="text-center text-dark fw-semibold pt-3">
+                      <input formControlName="Base_price" type="text" class="form-control" placeholder="السعر الاساسي"
+                        aria-label="Last name" />
+                    </td>
+                    <td class="text-center text-dark fw-semibold pt-3">
+                      <input formControlName="Coupon_price" type="text" class="form-control" placeholder="سعر الكوبون"
+                        aria-label="Last name" />
+                    </td>
+
+                    <td class="text-center text-dark fw-semibold pt-3">
+                      <input formControlName="points" type="text" class="form-control" placeholder=" النقاط"
+                        aria-label="Last name" />
+                    </td>
+                    <td class="text-center text-dark fw-semibold pt-3">
+                      <select class="form-select" aria-label="Default select example" formControlName="Coupon_type">
+                        <option selected>نوع الكوبون</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </td>
+
+                    <td class="text-dark fw-semibold pt-3">
+                      <div class="d-flex justify-content-center">
+                        <div class="col-6 text-center">
+                          <i class="fa-sharp fa-solid fa-trash"></i>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+
+
+                </tbody>
+              </table>
+            </div>
+          </form>
+
+          <!-- modal Footer -->
+          <div class="modalFooter mt-5">
+            <button type="button" class="btns button-styel" (click)="add_New_Product()">+</button>
+            <button type="button" class="btns button-styel me-4" (click)="submitFormadd(addprodectform.value ,addprodectform2.value)">حفظ</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
-
-<div class="product-price mt-5" id="flush-headingTow">
+<!-- <div class="product-price mt-5" id="flush-headingTow">
      <div class="product-price-item">
 
           <a class="product-price-link" data-bs-toggle="collapse" data-bs-target="#flush-collapseTow"
-               aria-expanded="false" aria-controls="flush-collapseOne">
+               aria-expanded="false" aria-controls="flush-collapseOne"  (click)="hided_collaps()">
                <i class="arrow_dowen fa-solid fa-chevron-left"></i>
                <span class="product-price-link-text"> قطع بولي بسن نحاس</span>
 
@@ -50,16 +265,13 @@
 
           </div>
      </div>
-</div>
+</div> -->
 
-
-
-
-<div class="product-price mt-5 mb-5" id="flush-headingThree">
+<!-- <div class="product-price mt-5 mb-5" id="flush-headingThree">
      <div class="product-price-item">
 
           <a class="product-price-link" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
-               aria-expanded="false" aria-controls="flush-collapseThree">
+               aria-expanded="false" aria-controls="flush-collapseThree"  (click)="hided_collaps()">
                <i class="arrow_dowen fa-solid fa-chevron-left"></i>
                <span class="product-price-link-text"> قطع بولي لحام</span>
 
@@ -79,7 +291,5 @@
 
           </div>
      </div>
-</div>
-
-
+</div> -->
 

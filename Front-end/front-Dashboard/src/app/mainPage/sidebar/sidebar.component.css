@@ -9,12 +9,12 @@
      position: fixed;
      z-index: 1;
      top: 0;
-     /* margin-top: 4.5rem; */
+     margin-top: 4.5rem;
      width: 5rem;
      height: 100vh;
      box-shadow: 0.063rem 0 1.25rem 0 #8690a3;
      overflow: auto;
-     padding-bottom: 15%;
+     padding-bottom: 2%;
 }
 
 .logo-container {
@@ -22,7 +22,7 @@
      align-items: center;
      padding: 0.938rem 0.938rem 0 0.938rem;
      width: 100%;
-     margin-top: 5.5rem;
+     /* margin-top: 5.5rem; */
 }
 
 .logo {

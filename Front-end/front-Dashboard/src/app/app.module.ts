@@ -1,5 +1,20 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+
+//start Data Tables
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort'
+import { MatFormFieldModule } from '@angular/material/form-field'
+import { MatInputModule } from '@angular/material/input'
+//End Data Tables
+
+//start sidenav
+import { MatSidenavModule } from '@angular/material/sidenav'
+import { MatListModule } from '@angular/material/list'
+import { MatIconModule } from '@angular/material/icon';
+//End sidenav
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -7,11 +22,11 @@ import { NavbarComponent } from './mainPage/navbar/navbar.component';
 import { SidebarComponent } from './mainPage/sidebar/sidebar.component';
 import { LoginComponent } from './login/login.component';
 import { MainPageComponent } from './mainPage/main-page/main-page.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TestComponent } from './test/nav2/test.component';
 import { PriceListComponent } from './product/price-list/price-list.component';
 import { ProductsComponent } from './product/products/products.component';
-import { MainlayoutComponent } from './layout/mainlayout/mainlayout.component';
+import { MainlayoutComponent } from './mainlayout/mainlayout.component';
 import { MainBodyComponent } from './layout/main-body/main-body.component';
 import { GeneralSupervisorComponent } from './users/general-supervisor/general-supervisor.component';
 import { DirectorMarketingComponent } from './users/director-marketing/director-marketing.component';
@@ -46,13 +61,22 @@ import { DiscontinuedMerchantsComponent } from './reports/discontinued-merchants
 
 import { HeadertabelComponent } from './headertabel/headertabel.component';
 import { BodytabelComponent } from './bodytabel/bodytabel.component';
-import { SublevelMenuComponent } from './test/nav2/sublevel-menu.component';
+
 import { ProductsPricesComponent } from './product/products-prices/products-prices.component';
-import { CollapsProductPriceTablesComponent } from './product/products-prices/collaps-product-price-tables.component';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DataTableComponent } from './data-table/data-table.component';
+import { NewFormComponent } from './test/new-form/new-form.component';
+import { MyFormComponent } from './test/new-form/form.component';
+
+
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
+    MyFormComponent,
     NavbarComponent,
     SidebarComponent,
     LoginComponent,
@@ -94,14 +118,28 @@ import { CollapsProductPriceTablesComponent } from './product/products-prices/co
     DiscontinuedMerchantsComponent,
     BodytabelComponent,
     HeadertabelComponent,
-    SublevelMenuComponent,
     ProductsPricesComponent,
-    CollapsProductPriceTablesComponent
+    DataTableComponent,
+    NewFormComponent,
+ 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatInputModule,
+    MatFormFieldModule,
+    FormsModule,
+    MatSidenavModule,
+    MatListModule,
+    MatIconModule
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
